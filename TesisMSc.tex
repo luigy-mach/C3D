@@ -1,0 +1,43 @@
+\input{EncabezadoTesisMSc}
+%\includeonly{Kap1/Kap1,Kap2/Kap2}
+\begin{document}
+\pagenumbering{roman}
+\include{HojaTitulo/HojaTituloMSc}
+\newpage
+\newpage
+\include{Declaracion}
+\include{Resumen}
+\renewcommand{\tablename}{\textbf{Tabla}}
+\renewcommand{\figurename}{\textbf{Figura}}
+\renewcommand{\listtablename}{Lista de Tablas}
+\renewcommand{\listfigurename}{Lista de Figuras}
+\renewcommand{\contentsname}{Contenido}
+
+
+%\newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
+
+\tableofcontents
+%\newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
+\include{Tab_Simbolos/TabSimbolosMSc} 
+%\tableofcontents
+%\listoffigures
+%\listoftables
+%\clearpage
+
+%\include{Resumen}%\newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
+\pagenumbering{arabic}
+\newpage	
+\include{Kap1/Kap1}
+\include{Kap2/Kap2}
+\include{Kap3/Kap3}
+%%%\include{Kap4/Kap4}
+%%%\include{Kap5/Kap5}
+%%%\include{Kap6/Kap6}
+%%%\include{Anexos/Anexos}%%%anexos
+\addcontentsline{toc}{chapter}
+{\numberline{}Bibliografía}
+% Puede cambiarse por alguna otra como IEEE
+\nocite{*}
+\bibliographystyle{Encabezado/Biblio/plaindin_esp}
+\bibliography{BibliMSc}
+\end{document}

@@ -1,0 +1,107 @@
+\documentclass[12pt,spanish,fleqn,letterpaper]{scrbook}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+%\usepackage{scrlayer-scrpage}
+\usepackage{epsfig}
+\usepackage{epic}
+\usepackage{eepic}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{threeparttable}
+\usepackage{amscd}
+\usepackage{here}
+\usepackage{graphicx}
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{subcaption}
+\usepackage{longtable}
+\usepackage{cite}
+\usepackage{scrhack}
+\usepackage{tikz}
+
+\usepackage{comment} %comentarios
+
+
+% Manejo de hypervínculos
+\usepackage{hyperref}
+\hypersetup{bookmarksnumbered=true,
+            colorlinks=true,
+            citecolor=black,
+            linkcolor=black}
+            
+% *** GRAPHICS RELATED PACKAGES ***
+\usepackage{epstopdf}
+ \usepackage[siunitx, american, smartlabels, cute inductors, europeanvoltages]{circuitikz}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{arrows.meta,backgrounds}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{chains}
+\usetikzlibrary{calc}
+\makeatletter
+\ctikzset{lx/.code args={#1 and #2}{ 
+  \pgfkeys{/tikz/circuitikz/bipole/label/name=\parbox{1cm}{\centering #1  \\ #2}}
+    \ctikzsetvalof{bipole/label/unit}{}
+    \ifpgf@circ@siunitx 
+        \pgf@circ@handleSI{#2}
+        \ifpgf@circ@siunitx@res 
+            \edef\pgf@temp{\pgf@circ@handleSI@val}
+            \pgfkeyslet{/tikz/circuitikz/bipole/label/name}{\pgf@temp}
+            \edef\pgf@temp{\pgf@circ@handleSI@unit}
+            \pgfkeyslet{/tikz/circuitikz/bipole/label/unit}{\pgf@temp}
+        \else
+        \fi
+    \else
+    \fi
+}}
+
+%Estilo de los encabezados
+%Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
+\usepackage[Bjornstrup]{fncychap}
+
+%Para rotar texto, objetos y tablas
+\usepackage{rotating} 
+
+% Como numerar las ecuaciones, figuras y tablas
+\renewcommand{\theequation}{\thechapter-\arabic{equation}}
+\renewcommand{\thefigure}{\textbf{\thechapter-\arabic{figure}}}
+\renewcommand{\thetable}{\textbf{\thechapter-\arabic{table}}}
+
+%% Estilo de las páginas
+
+\KOMAoptions{DIV=14}%Margenes 4-15 (menos numero es menos margen)
+%\usepackage{showframe}
+
+\KOMAoptions{headlines=2.1}
+\KOMAoptions{footsepline=true}
+
+\recalctypearea
+ \fancyhead[RE]{\itshape\nouppercase puto}
+ \fancyhead[LO]{\itshape\nouppercase\rightmark}
+ \fancyfoot[C]{\thepage}
+ 
+
+% Unidades de separación
+\unitlength1mm %Define la unidad LE para Figuras
+\mathindent0cm %Define la distancia de las formulas al texto
+\marginparwidth0cm
+\parindent0cm %Define la distancia de la primera linea de un parrafo
+
+%Para tablas,  redefine el backschlash en tablas donde se define la posición del texto en las
+%casillas (con \centering \raggedright o \raggedleft)
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\let\PBS=\PreserveBackslash
+
+%Espacio entre lineas
+\renewcommand{\baselinestretch}{1.1}
+
+% Array modificado
+\newcommand{\arr}[1]{\raisebox{1.5ex}[0cm][0cm]{#1}}
+
+%Definir comandos nuevos
+\usepackage{Encabezado/Befehle}
+
+
+%separación de silabas de palabras mal cortadas entre líneas
+\hyphenation {pu-to}

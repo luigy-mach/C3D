@@ -1,0 +1,35 @@
+\chapter{Introducción}
+
+
+\section{Contexto y motivación}
+La visión computacional ha entrado en una fase de fuerte desarrollo  y su uso en los últimos años se ha beneficiado de innovaciones en campos relacionados como el \textit{ML} \ref{abreviaturas:ML} \ref{abreviaturas}, redes de internet más veloces, poder computacional y la tecnología de las cámaras. Las aplicaciones actuales van mucho más allá de una sencilla cámara de seguridad de hace una década. Ahora incluyen campos como el monitoreo de la línea de montaje, la medicina deportiva, la robótica y la teleasistencia. La complejidad del desarrollo de un sistema que realiza estas tareas complejas requiere de técnicas coordinadas de análisis de imágenes, clasificación y segmentación, algoritmos de inferencia y algoritmos de estimación de espacio de estados.
+ 
+ 
+Para comprender la importancia de este problema, es interesante apreciar algunas estadísticas recientes demuestran que vivimos en país donde se registran altas tasas de violencia y actos criminales llamase, robos a mano armada, secuestros y muchos actos delictivos que se dan en la vía pública. En combinación con los centros de vigilancia que han estado aumentando en los últimos años y aumento masivo de información hace casi imposible poder detectar estas acciones en los videos de vigilancia en tiempo real. Si bien las cuentan con atención constante, hay dos problemas: no hay Suficiente personal para la supervisión de las cámaras y el personal se ve limitado al no poder controlar todas ellas.
+ 
+Esta es la motivación de este trabajo en \textit{CV} puede proporcionar ahorros económicos fuertes eliminando la necesidad de asistencia las 24 horas en los centros de vigilancia. Una posible aplicaciones es la teleasistencia, podría utilizar video para detectar conductas anómalas, como caídas o periodos de inactividad, cambio abruptos en la trayectoria de las personas y aglomeración de personas. Por lo tanto, se están desarrollando sistemas actuales que recogen una amplia gama de información de vigilancia relevante que puedan dar indicios que una acción violenta es en progreso y enviar esta información a un servidor central a través de internet. Por lo tanto, este sistema proporciona una clara reducción de tiempo de respuesta aún acto violento, así como la vigilancia temprana de actos criminales. En general, la determinación del comportamiento humano es un problema difícil visión computacional, y hay muchos enfoques diferentes, incluyendo el seguimiento de movimiento completo de un cuerpo 3D, a través de una inferencia bayesiana.
+ 
+ 
+\section{Descripcion del problema}
+
+Los principales problemas de la visión computacional son: en primer lugar, debemos detectar de alguna manera lo que consideramos los objetos de primer plano, entonces, debemos rastrear estos objetos en el tiempo (sobre varios cuadros de vídeo), y tercero, debemos discernir algo sobre lo que estos objetos estás haciendo. 
+ 
+ 
+Detectar objetos en movimiento en una escena de video y separarlos del fondo es un desafiante problema debido a complicaciones de iluminación, sombras, fondos dinámicos, etc \cite{albiol2003robust}. La detección de movimiento se refiere a ser capaz de notar objetos que se mueven dentro de una escena, separando así los objetos de primer plano del fondo. Hay varias técnicas que se han aplicado a la detección de movimiento \cite{kaewtrakulpong2002improved} y se pueden agrupar en tres grandes categorías: modelado ambiental \cite{mittal2004motion}, segmentación de movimiento \cite{mittal2004motion}, y la clasificación de objetos \cite{mittal2004motion}.
+ 
+  
+\section{Objetivos}
+  \subsubsection{Generales}
+Una vez que los objetos  de una imagen ha sido separados del fondo, estamos listo para darle interezal seguimiento de estos objetos individualmente. El objetivo es rastrear objetos particulares durante las frames siguientes en la secuencia de vídeo sobre la base de sus características y ubicaciones únicas. Un importante campo de investigación es rastrear a varias personas en entornos desordenados. Este es un problema difícil debido a varios factores: las personas tienen forma o color similar, eventos complejos como correr y caminar pueden estar dentro de la misma escena o perspectiva de profundidad de cámaras del mundo real. 
+%\subsubsection{Especificos}
+ 
+
+\section{Estructura del documento}
+En el capítulo 2 se observa y analiza los trabajos realacionados más importantes
+desarrollados en los útimos años, se muestra cada uno de los métodos analizados y los
+resultados obtenidos.\\
+En el capítulo 3 abordamos el marco teórico donde se desarrolla una pequeña sustentación del pabellón auricular para su utilización como técnica biométrica.\\
+En el capítulo 4 se muestra las pruebas y resultados realizados sobre una base de
+datos basadandose en la organización del marco teórico\\
+En el capítulo 5 se expone las conclusiones a las que se llegó despues de realizar la
+investigación.
